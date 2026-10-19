@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pasteleria, pasteles y postres artesanales">
+    <meta name="keywords" content="Pasteles, Macarons, Pastelitos, Pasteleria">
+    <link rel="stylesheet" href="CSS/miEstilo.css">
+    <title>Pasteleria</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+    <!-- 1) MENU -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#inicio">Pasteleria</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav me-auto ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#promociones">Promociones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#catalogo">Catalogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+                <button class="btn btn-rosa" data-bs-toggle="modal" data-bs-target="#modalPedido">
+                    <i class="bi bi-bag-heart"></i> Hacer pedido
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2) ENCABEZADO -->
+    <header id="inicio" class="d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-8">
+                    <div id="inicio-titulo">
+                        <h1>Un bocado de felicidad</h1>
+                        <p>Pasteles hechos a mano, macarons y postres de temporada.</p>
+                        <a href="#catalogo" class="btn btn-rosa btn-lg">Ordena ahora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3) PROMOCIONES -->
+    <section id="promociones">
+        <div class="container">
+            <h2 class="titulo-seccion">Promociones</h2>
+            <div class="row">
+                <div class="col-12 col-md-4 mb-3">
+                    <div class="border text-center p-4 rounded h-100 bg-white">
+                        <i class="bi bi-cake2 fs-1"></i>
+                        <h5>2x1 en rebanadas</h5>
+                        <p>Todos los viernes en pasteles seleccionados.</p>
+                        <span class="badge text-bg-danger">Viernes</span>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-3">
+                    <div class="border text-center p-4 rounded h-100 bg-white">
+                        <i class="bi bi-gift fs-1"></i>
+                        <h5>Macarons con 15% de descuento</h5>
+                        <p>En cajas de 6 piezas.</p>
+                        <span class="badge text-bg-danger">-15%</span>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-3 d-none d-md-block">
+                    <div class="border text-center p-4 rounded h-100 bg-white">
+                        <i class="bi bi-cup-hot fs-1"></i>
+                        <h5>Cafe + postre</h5>
+                        <p>Combo de la tarde, de 4 a 7 pm.</p>
+                        <span class="badge text-bg-danger">$89</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4) GALERIA (carrusel) -->
+    <section id="galeria">
+        <div class="container">
+            <h2 class="titulo-seccion">Galeria</h2>
+            <div id="carruselGaleria" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner rounded-5">
+                    <div class="carousel-item active">
+                        <img src="images/pastel.jpg" class="d-block w-100 slide-img" alt="Pasteles">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/pastelitos.jpg" class="d-block w-100 slide-img" alt="Pastelitos">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/macarons.jpg" class="d-block w-100 slide-img" alt="Macarons">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carruselGaleria" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carruselGaleria" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5) CATALOGO (10 productos) -->
+    <section id="catalogo">
+        <div class="container">
+            <h2 class="titulo-seccion">Nuestro Catalogo</h2>
+            <div class="row">
+
+                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                    <div class="card h-100 bg-white">
+                        <i class="bi bi-cake2"></i>
+                        <h5>Pastel vainilla y rosa</h5>
+                        <p>Dos pisos con crema de vainilla.</p>
+                        <span class="precio">$480 MXN</span>
+                        <button class="btn btn-rosa" data-bs-toggle="modal" data-bs-target="#modalPedido">Pedir</button>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                    <div class="card h-100 bg-white">
+                        <i class="bi bi-cake"></i>
+                        <h5>Pastel de fresas</h5>
+                        <p>Fresas frescas y crema ligera.</p>
+                        <span class="precio">$420 MXN</span>
+                        <button class="btn btn-rosa" data-bs-toggle="modal" data-bs-target="#modalPedido">Pedir</button>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                    <div class="card h-100 bg-white">
+                        <i class="bi bi-cake2-fill"></i>
+                        <h5>Pastel de chocolate</h5>
+                        <p>Cacao intenso y ganache.</p>
+                        <span class="precio">$450 MXN</span>
+                        <button class="btn btn-rosa" data-bs-toggle="modal" data-bs-target="#modalPedido">Pedir</button>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                    <div class="card h-100 bg-white">
+                        <i class="bi bi-heart"></i>
+                        <h5>Pastel de queso y frutos rojos</h5>
+                        <p>Base de galleta y mermelada casera.</p>
+                        <span class="precio">$390 MXN</span>
+                        <button class="btn btn-rosa" data-bs-toggle="modal" data-bs-target="#modalPedido">Pedir</button>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                    <div class="card h-100 bg-white">
+                        <i class="bi bi-stars"></i>
+                        <h5>Macarons de frambuesa</h5>
+                        <p>Caja de 6 piezas.</p>
+                        <span class="precio">$149 MXN</span>
+                        <button class="btn btn-rosa" data-bs-toggle="modal" data-bs-target="#modalPedido">Pedir</button>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                    <div class="card h-100 bg-white">
+                        <i class="bi bi-star"></i>
+                        <h5>Macarons de pistache</h5>
+                        <p>Caja de 6 piezas.</p>
+                        <span class="precio">$159 MXN</span>
+                        <button class="btn btn-rosa" data-bs-toggle="modal" data-bs-target="#modalPedido">Pedir</button>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3 mb-4 d-none d-md-block">
+                    <div class="card h-100 bg-white">
+                        <i class="bi bi-gift"></i>
+                        <h5>Caja surtida de 12</h5>
+                        <p>Los sabores de la casa.</p>
+                        <span class="precio">$279 MXN</span>
+                        <button class="btn btn-rosa" data-bs-toggle="modal" data-bs-target="#modalPedido">Pedir</button>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 mb-4 d-none d-md-block">
+                    <div class="card h-100 bg-white">
+                        <i class="bi bi-balloon-heart"></i>
+                        <h5>Pastelito de vainilla</h5>
+                        <p>Betun de mantequilla.</p>
+                        <span class="precio">$45 MXN</span>
+                        <button class="btn btn-rosa" data-bs-toggle="modal" data-bs-target="#modalPedido">Pedir</button>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 mb-4 d-none d-md-block">
+                    <div class="card h-100 bg-white">
+                        <i class="bi bi-balloon"></i>
+                        <h5>Pastelito terciopelo rojo</h5>
+                        <p>Queso crema y cacao.</p>
+                        <span class="precio">$55 MXN</span>
+                        <button class="btn btn-rosa" data-bs-toggle="modal" data-bs-target="#modalPedido">Pedir</button>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 mb-4 d-none d-md-block">
+                    <div class="card h-100 bg-white">
+                        <i class="bi bi-emoji-smile"></i>
+                        <h5>Pastelito de limon</h5>
+                        <p>Fresco y citrico.</p>
+                        <span class="precio">$50 MXN</span>
+                        <button class="btn btn-rosa" data-bs-toggle="modal" data-bs-target="#modalPedido">Pedir</button>
+                    </div>
+                </div>
+
+            </div>
+            <p class="text-center d-md-none">Ve el catalogo completo desde una tableta o computadora.</p>
+        </div>
+    </section>
+
+    <br>
+
+    <!-- 6) FOOTER con redes sociales -->
+    <footer id="contacto" class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>2026 Pasteleria. Pasteles y postres artesanales.</p>
+            <p class="d-none d-md-block">Lunes a sabado de 9:00 a 20:00</p>
+            <div class="d-flex justify-content-center gap-4">
+                <a href="" class="fs-4"><i class="bi bi-facebook"></i></a>
+                <a href="" class="fs-4"><i class="bi bi-instagram"></i></a>
+                <a href="" class="fs-4"><i class="bi bi-tiktok"></i></a>
+                <a href="" class="fs-4"><i class="bi bi-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL de pedido -->
+    <div class="modal fade" id="modalPedido" tabindex="-1" aria-labelledby="tituloModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tituloModal">Hacer pedido</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre">
+                        </div>
+                        <div class="mb-3">
+                            <label for="producto" class="form-label">Producto</label>
+                            <select class="form-select" id="producto">
+                                <option>Pastel</option>
+                                <option>Macarons</option>
+                                <option>Pastelitos</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="fecha" class="form-label">Fecha de entrega</label>
+                            <input type="date" class="form-control" id="fecha">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-rosa">Enviar pedido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
