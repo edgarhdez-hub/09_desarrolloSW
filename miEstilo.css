@@ -1,0 +1,132 @@
+body{
+    background-color: #f4efeb;
+    color: #3d2b2b;
+}
+
+h1, h2, h3, .navbar-brand{
+    font-family: Georgia, serif;
+}
+
+/* ===== Menu ===== */
+.navbar-brand{
+    font-size: 28px;
+}
+
+.nav-link:hover{
+    color: #c9626b;
+}
+.btn-rosa{
+    background-color: #e8a9a6;
+    color: #3d2b2b;
+    border: none;
+}
+
+.btn-rosa:hover{
+    background-color: #c9626b;
+    color: white;
+}
+
+/* ===== Encabezado ===== */
+header{
+    background-image: url(../images/portada.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 90vh;
+}
+#inicio-titulo h1{
+    font-size: 64px;
+    color: #3d2b2b;
+}
+
+#inicio-titulo p{
+    font-size: 20px;
+}
+.titulo-seccion{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+/* ===== Promociones ===== */
+#promociones .bi{
+    display: inline-block;
+    width: 72px;
+    height: 72px;
+    line-height: 72px;
+    border-radius: 50%;
+    background: #f6dcdb;
+    color: #c9626b;
+}
+
+/* ===== Galeria (carrusel) ===== */
+.slide-img{
+    height: 380px;
+    object-fit: cover;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+    filter: invert(1) drop-shadow(0 0 3px rgba(255,255,255,0.8));
+}
+
+/* ===== Catalogo ===== */
+.card{
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: center;
+    padding: 20px 15px;
+}
+
+.card .bi{
+    font-size: 60px;
+    color: #c9626b;
+}
+
+.precio{
+    color: #c9626b;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* ===== Footer ===== */
+footer a{
+    color: white;
+}
+
+footer a:hover{
+    color: #e8a9a6;
+}
+
+
+
+/* Tableta (menos de 992px) */
+@media (max-width: 991px){
+    header{
+        min-height: 70vh;
+    }
+    #inicio-titulo h1{
+        font-size: 48px;
+    }
+    .slide-img{
+        height: 300px;
+    }
+}
+
+/* Celular (menos de 768px) */
+@media (max-width: 767px){
+    header{
+        min-height: 60vh;
+    }
+    #inicio-titulo h1{
+        font-size: 34px;
+    }
+    .titulo-seccion{
+        font-size: 24px;
+    }
+    .slide-img{
+        height: 220px;
+    }
+}
